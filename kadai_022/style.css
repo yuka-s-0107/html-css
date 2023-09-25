@@ -1,0 +1,93 @@
+h1 {
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  background-color: rgb(244, 79, 79);
+  color: rgb(255, 255, 255);
+}
+
+p {
+  margin: 0px;
+  font-size: 20px;
+}
+
+body {
+  margin: 0px;
+}
+
+a {
+  font-size: 20px;
+}
+
+main {
+  padding: 10px;
+}
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contents {
+  border: solid rgb(238, 204, 204);
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  border-bottom: dotted rgb(236, 122, 122);
+}
+h2::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-color: rgb(239, 111, 139);
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+
+div p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+img {
+  margin: 10px 0px;
+  width: 70%;
+}
+.img-class {
+  width: 50%;
+}
+
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+a {
+  color: rgb(255, 255, 255);
+
+  &:hover {
+    color: rgb(245, 178, 168);
+  }
+  &:visited {
+    color: green;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+  #parent {
+    display: block;
+  }
+}
