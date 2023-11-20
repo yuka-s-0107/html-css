@@ -83,3 +83,30 @@ divBtnEl.addEventListener("click", () => {
   const resultEl = document.querySelector("#divResult");
   resultEl.textContent = quo;
 });
+
+const div1 = (val, val2) => {
+  const quo = Math.floor(val / val2);
+  return quo;
+};
+const div2 = (val, val2) => {
+  const quo = val % val2;
+  return quo;
+};
+// console.log(div1(3, 2));
+// console.log(div2(3, 2));
+
+const divBtnEl2 = document.querySelector("#divBtn2");
+divBtnEl2.addEventListener("click", () => {
+  const inputEl7 = document.querySelector("#div3");
+  const val7 = +inputEl7.value;
+
+  const inputEl8 = document.querySelector("#div4");
+  const val8 = +inputEl8.value;
+
+  const result1 = div1(val7, val8);
+  const result2 = div2(val7, val8);
+
+  const resultEl = document.querySelector("#divResult2");
+  resultEl.textContent = `${result1} 余り ${result2}`;
+  //テンプレート構文${}↑
+});
