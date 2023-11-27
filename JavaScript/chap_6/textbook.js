@@ -51,7 +51,7 @@
 //   return (base * height) / 2;
 // }
 
-// //6-12
+// // //6-12
 // function checkScope() {
 //   let scope = "blockScope";
 //   return scope;
@@ -168,9 +168,9 @@
 // console.log(getTriangleArea(4));
 // console.log(getTriangleArea(1, 2));
 
-//6-32
-function show(x, y = 1) {
-  console.log(`x=${x}`);
-  console.log(`y=${y}`);
-}
-show();
+// //6-32
+// function show(x, y = 1) {
+//   console.log(`x=${x}`);
+//   console.log(`y=${y}`);
+// }
+// show();

@@ -42,5 +42,11 @@ let printName2 = (name) => {
 };
 console.log(`こんにちは、${printName2(name)}さん`);
 
-//4.引数の数値配列から最大値を返す関数
-console.log(Math.max(-1, 0, 1, 2));
+// //4.引数の数値配列から最大値を返す関数
+// console.log(Math.max(-1, 0, 1, 2));
+
+let i = [-1, 0, 1, 2];
+for (let i=-1,i<2,i++) {
+  getMaxValue ;
+}
+console.log();

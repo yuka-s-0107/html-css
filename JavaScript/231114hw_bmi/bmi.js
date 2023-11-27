@@ -18,6 +18,13 @@ const userC = {
 const users = [userA, userB, userC];
 
 for ({ height, weight } of users) {
+  //分割代入↑
   const bmi = weight / (height * height);
-  console.log(`BMIは、${bmi} です。`);
+  console.log(`BMIは、${bmi.toFixed(2)} です。`);
 }
+
+users.forEach((user) => {
+  const { height, weight } = user;
+  const bmi = weight / (height * height);
+  console.log(`BMIは、${bmi.toFixed(2)} です。`);
+});

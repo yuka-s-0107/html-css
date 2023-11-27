@@ -16,23 +16,38 @@ const getOmikuji = () => {
   }
 };
 
-//getOmikujiの結果を定数valueに代入
-const value = getOmikuji();
-
 // button(id="btn")を押した時にやることを指示
 let button = document.querySelector("#btn");
 button.addEventListener("click", () => {
+  //getOmikujiの結果を定数valueに代入
+  const value = getOmikuji();
+  console.log(value);
   //<p>におみくじの結果(定数value)を入れて表示させる
   const pEle = document.querySelector("#omikuji");
   pEle.textContent = value;
 
   //ストレージにデータを保存
   let storage = localStorage;
-  storage.setItem("getOmikuji", value);
-  const value2 = localStorage.getItem("getOmikuji");
-  // console.log(storage.getItem("getOmikuji"));
 
-  //storageの内容を画面に表示
-  const pEle2 = document.querySelector("#omikujiStorage");
-  pEle2.textContent = value2;
+  const value2 = storage.getItem("omikujiResult");
+  if (value2 !== null) {
+    const value3 = value + "," + value2;
+    storage.setItem("omikujiResult", value3);
+    const pEle2 = document.querySelector("#omikujiStorage");
+    pEle2.textContent = value3;
+  } else {
+    storage.setItem("omikujiResult", value);
+    const pEle2 = document.querySelector("#omikujiStorage");
+    pEle2.textContent = value;
+  }
 });
+
+// //ストレージにデータを保存
+// let storage = localStorage;
+// storage.setItem("getOmikuji", value);
+const omikujiValue = localStorage.getItem("omikujiResult");
+// console.log(storage.getItem("getOmikuji"));
+
+//storageの内容を画面に表示
+const pEle2 = document.querySelector("#omikujiStorage");
+pEle2.textContent = omikujiValue;
